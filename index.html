@@ -12,11 +12,20 @@
   .hero-copy h1{font-size:2.9rem;margin-bottom:20px;}
   .hero-copy p.lead{font-size:1.05rem;color:var(--muted);max-width:44ch;margin-bottom:32px;}
   .hero-actions{display:flex;gap:14px;}
-  .hero-panel{padding:40px 0 40px 50px;display:flex;flex-direction:column;justify-content:space-between;}
-  .stat{padding:18px 0;border-bottom:1px solid var(--line);}
-  .stat:last-child{border-bottom:none;}
-  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.7rem;}
-  .stat span{font-size:.85rem;color:var(--muted);}
+  .hero-panel{padding:40px 0 40px 50px;display:flex;align-items:center;min-width:0;}
+  .hero-carousel{width:100%;position:relative;overflow:hidden;}
+  .carousel-track{display:flex;transition:transform .35s ease;}
+  .carousel-slide{min-width:100%;padding:20px 0 56px;}
+  .carousel-kicker{display:block;color:var(--blue);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;}
+  .carousel-slide h2{font-size:2.4rem;margin-bottom:12px;}
+  .carousel-slide p{max-width:26ch;color:var(--muted);font-size:1rem;}
+  .carousel-controls{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;}
+  .carousel-buttons{display:flex;gap:8px;}
+  .carousel-button{width:34px;height:34px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:1.1rem;line-height:1;}
+  .carousel-button:hover,.carousel-button:focus-visible{background:var(--ink);color:#fff;outline:none;}
+  .carousel-dots{display:flex;gap:7px;}
+  .carousel-dot{width:22px;height:3px;border:0;background:var(--line);cursor:pointer;padding:0;}
+  .carousel-dot.active{background:var(--blue);}
 
   .process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark);border-left:1px solid var(--line-dark);}
   .process-step{border-right:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:26px;}
@@ -79,9 +88,36 @@
       </div>
     </div>
     <div class="hero-panel">
-      <div class="stat"><b>120+</b><span>active courses</span></div>
-      <div class="stat"><b>40</b><span>industry mentors</span></div>
-      <div class="stat"><b>92%</b><span>cohort completion rate</span></div>
+      <div class="hero-carousel" data-carousel aria-label="Ciranta highlights">
+        <div class="carousel-track">
+          <article class="carousel-slide" aria-hidden="false">
+            <span class="carousel-kicker">What you can explore</span>
+            <h2>120+ courses</h2>
+            <p>Practical learning paths built around the skills that move careers forward.</p>
+          </article>
+          <article class="carousel-slide" aria-hidden="true">
+            <span class="carousel-kicker">Who keeps you moving</span>
+            <h2>40 mentors</h2>
+            <p>Get thoughtful feedback from people actively doing the work you want to do.</p>
+          </article>
+          <article class="carousel-slide" aria-hidden="true">
+            <span class="carousel-kicker">What makes it stick</span>
+            <h2>92% complete</h2>
+            <p>Small cohorts and real projects help learners finish what they start.</p>
+          </article>
+        </div>
+        <div class="carousel-controls">
+          <div class="carousel-dots" role="tablist" aria-label="Choose a highlight">
+            <button class="carousel-dot active" type="button" role="tab" aria-label="Show highlight 1" aria-selected="true"></button>
+            <button class="carousel-dot" type="button" role="tab" aria-label="Show highlight 2" aria-selected="false"></button>
+            <button class="carousel-dot" type="button" role="tab" aria-label="Show highlight 3" aria-selected="false"></button>
+          </div>
+          <div class="carousel-buttons">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous highlight">&#8592;</button>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Next highlight">&#8594;</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -183,6 +219,6 @@
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
