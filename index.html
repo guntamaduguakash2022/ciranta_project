@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciranta — Learn what moves you forward</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero{padding:70px 0 0;}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border-top:1px solid var(--line);}
+  .hero-copy{padding:60px 60px 60px 0;border-right:1px solid var(--line);}
+  .hero-copy h1{font-size:2.9rem;margin-bottom:20px;}
+  .hero-copy p.lead{font-size:1.05rem;color:var(--muted);max-width:44ch;margin-bottom:32px;}
+  .hero-actions{display:flex;gap:14px;}
+  .hero-panel{padding:40px 0 40px 50px;display:flex;flex-direction:column;justify-content:space-between;}
+  .stat{padding:18px 0;border-bottom:1px solid var(--line);}
+  .stat:last-child{border-bottom:none;}
+  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.7rem;}
+  .stat span{font-size:.85rem;color:var(--muted);}
+
+  .process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark);border-left:1px solid var(--line-dark);}
+  .process-step{border-right:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:26px;}
+  .process-step .num{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:var(--coral);display:block;margin-bottom:10px;}
+  .process-step h4{font-size:1rem;margin-bottom:6px;}
+  .process-step p{font-size:.85rem;color:#a7acb8;}
+
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);}
+  .testi{padding:30px 40px 30px 0;border-right:1px solid var(--line);}
+  .testi:last-child{border-right:none;padding-left:40px;padding-right:0;}
+  .testi p{font-size:1.1rem;margin-bottom:14px;}
+  .testi .who{font-size:.85rem;color:var(--muted);}
+
+  .cta{background:var(--blue);color:#fff;padding:56px 60px;display:flex;justify-content:space-between;align-items:center;gap:30px;}
+  .cta h2{color:#fff;font-size:1.7rem;max-width:18ch;}
+  .cta .btn{background:#fff;color:var(--ink);border-color:#fff;}
+  .cta .btn:hover{background:var(--coral);border-color:var(--coral);color:#fff;}
+
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-copy{border-right:none;border-bottom:1px solid var(--line);padding:40px 0;}
+    .hero-panel{padding:30px 0;}
+    .process{grid-template-columns:1fr 1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .testi:last-child{border-top:1px solid var(--line);padding-left:0;padding-top:30px;}
+    .cta{flex-direction:column;text-align:center;padding:40px 26px;}
+  }
+  @media(max-width:560px){.process{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-page="home">
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">Ciran<i>ta</i></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="courses.html" data-nav="courses">Courses</a>
+      <a href="team.html" data-nav="team">Team</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="login">Log in</a>
+      <a href="register.html" class="btn ghost">Register</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="tag"><i></i>New cohorts open monthly</div>
+      <h1>Learn what moves you forward.</h1>
+      <p class="lead">Ciranta pairs practical courses with mentors who've done the job — so what you learn on Monday, you can use by Friday.</p>
+      <div class="hero-actions">
+        <a href="courses.html" class="btn">Browse courses</a>
+        <a href="about.html" class="btn ghost">How it works</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="stat"><b>120+</b><span>active courses</span></div>
+      <div class="stat"><b>40</b><span>industry mentors</span></div>
+      <div class="stat"><b>92%</b><span>cohort completion rate</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="courses">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Courses people actually finish</h2>
+      <p>Built around real projects and small cohorts, not passive video queues.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell"><div class="swatch"></div><h3>Resume & LinkedIn Essentials</h3><p>Turn your work history into a story recruiters actually read.</p><div class="meta"><span>3 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell"><div class="swatch"></div><h3>Applied Data Analysis</h3><p>Clean, model, and present real datasets from week one.</p><div class="meta"><span>8 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell"><div class="swatch"></div><h3>Content Strategy That Converts</h3><p>Plan, write, and measure content across every channel.</p><div class="meta"><span>6 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell"><div class="swatch"></div><h3>Managing People Well</h3><p>First-time manager skills for hard conversations and real growth.</p><div class="meta"><span>4 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell"><div class="swatch"></div><h3>Cybersecurity Foundations</h3><p>Understand real threats and how organizations defend against them.</p><div class="meta"><span>5 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell"><div class="swatch"></div><h3>Mastering Interviews</h3><p>Practice with mock interviews and get feedback that sticks.</p><div class="meta"><span>2 weeks</span><a href="course-details.html">View course</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Why learners choose Ciranta</h2>
+      <p>Not a video library. A structured path with people who keep you accountable.</p>
+    </div>
+    <div class="process">
+      <div class="process-step"><span class="num">01</span><h4>Pick a path</h4><p>Browse by category or take a 2-minute fit quiz.</p></div>
+      <div class="process-step"><span class="num">02</span><h4>Join a cohort</h4><p>Start on the next open date with a fixed group.</p></div>
+      <div class="process-step"><span class="num">03</span><h4>Build in public</h4><p>Weekly projects, reviewed by mentors and peers.</p></div>
+      <div class="process-step"><span class="num">04</span><h4>Show your work</h4><p>Finish with a portfolio piece, not just a badge.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Find your category</h2>
+      <p>Four tracks, each with a clear next step.</p>
+    </div>
+    <div class="grid-4">
+      <div class="cell"><div class="swatch"></div><h4>Career Advancement</h4><p>5 courses</p></div>
+      <div class="cell"><div class="swatch"></div><h4>Strategic HR</h4><p>5 courses</p></div>
+      <div class="cell"><div class="swatch"></div><h4>Business Management</h4><p>5 courses</p></div>
+      <div class="cell"><div class="swatch"></div><h4>Digital Marketing</h4><p>5 courses</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head"><h2>Hear from students</h2></div>
+    <div class="testi-grid">
+      <div class="testi"><p>"The analytics course gave me real project work, not just lecture slides. I used it directly in my interviews."</p><div class="who">Priya Menon — Business Analyst</div></div>
+      <div class="testi"><p>"Small cohort meant my mentor actually reviewed my work every week. That accountability is what made it stick."</p><div class="who">Aditya Kumar — ML Engineer</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Ready to start your next chapter?</h2>
+      <a href="register.html" class="btn">Create your account</a>
+    </div>
+  </div>
+</section>
+
+<footer class="dark" style="padding:60px 0 26px;">
+  <div class="wrap">
+    <div class="grid-4" style="border:none;margin-bottom:44px;">
+      <div class="cell" style="border:none;padding:0 28px 0 0;">
+        <a href="index.html" class="brand" style="color:#fff;">Ciran<i>ta</i></a>
+        <p style="font-size:.88rem;color:#a7acb8;margin-top:14px;max-width:30ch;">A learning platform built around mentors, small cohorts, and work you can actually show.</p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Explore</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="courses.html">Courses</a></p>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="about.html">About</a></p>
+        <p style="font-size:.88rem;"><a href="team.html">Team</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Account</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="login.html">Log in</a></p>
+        <p style="font-size:.88rem;"><a href="register.html">Register</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Contact</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;">info@ciranta.academy</p>
+        <p style="font-size:.88rem;">+91 99999 99999</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line-dark);padding-top:22px;display:flex;justify-content:space-between;font-size:.82rem;color:#767c8a;">
+      <span>&copy; 2026 Ciranta Academy</span>
+      <span>Terms &middot; Privacy</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

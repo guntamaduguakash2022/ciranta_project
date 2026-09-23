@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ciranta</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-head{padding:70px 0 50px;border-bottom:1px solid var(--line);}
+  .page-head h1{font-size:2.6rem;max-width:16ch;margin-bottom:18px;}
+  .page-head p{font-size:1.05rem;color:var(--muted);max-width:48ch;}
+
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:70px 0;border-bottom:1px solid var(--line);}
+  .story h2{font-size:1.6rem;margin-bottom:16px;}
+  .story p{color:var(--muted);margin-bottom:14px;font-size:.98rem;}
+
+  .values{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  .values .cell{padding:32px;}
+
+  @media(max-width:900px){
+    .story{grid-template-columns:1fr;}
+    .values{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){.values{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-page="about">
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">Ciran<i>ta</i></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="courses.html" data-nav="courses">Courses</a>
+      <a href="team.html" data-nav="team">Team</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="login">Log in</a>
+      <a href="register.html" class="btn ghost">Register</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>Built by people who kept switching careers.</h1>
+    <p>Ciranta started as a study group for people mid-career-change. We kept the parts that worked — small cohorts, real mentors, real projects — and cut the rest.</p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;">
+    <div>
+      <h2>What we believe</h2>
+      <p>Courses fail when they're built to be watched, not used. Every ciranta course is designed backward from a real deliverable — a resume, a dashboard, a campaign plan — so the learning has somewhere to go.</p>
+      <p>We keep cohorts small on purpose. Mentors who don't know your name can't give you feedback that matters.</p>
+    </div>
+    <div>
+      <h2>How we're different</h2>
+      <p>No infinite video libraries. Every track runs on a fixed start date with a group that moves through it together, which means deadlines, discussion, and people noticing if you fall behind.</p>
+      <p>Every mentor is currently working the job they teach — not a former practitioner reading old slides.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What we optimize for</h2>
+      <p>Three things guide every course we build.</p>
+    </div>
+    <div class="values">
+      <div class="cell"><div class="swatch"></div><h3>Finishability</h3><p>Short, cohort-based tracks people actually complete — not 40-hour libraries that go untouched.</p></div>
+      <div class="cell"><div class="swatch"></div><h3>Feedback</h3><p>Every project gets reviewed by a mentor, not graded by a quiz engine.</p></div>
+      <div class="cell"><div class="swatch"></div><h3>Proof of work</h3><p>You leave with something to show — a portfolio piece, not just a certificate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta">
+      <h2>See what you could build next.</h2>
+      <a href="courses.html" class="btn">Browse courses</a>
+    </div>
+  </div>
+</section>
+
+<footer class="dark" style="padding:60px 0 26px;">
+  <div class="wrap">
+    <div class="grid-4" style="border:none;margin-bottom:44px;">
+      <div class="cell" style="border:none;padding:0 28px 0 0;">
+        <a href="index.html" class="brand" style="color:#fff;">Ciran<i>ta</i></a>
+        <p style="font-size:.88rem;color:#a7acb8;margin-top:14px;max-width:30ch;">A learning platform built around mentors, small cohorts, and work you can actually show.</p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Explore</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="courses.html">Courses</a></p>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="about.html">About</a></p>
+        <p style="font-size:.88rem;"><a href="team.html">Team</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Account</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="login.html">Log in</a></p>
+        <p style="font-size:.88rem;"><a href="register.html">Register</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Contact</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;">info@ciranta.academy</p>
+        <p style="font-size:.88rem;">+91 99999 99999</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line-dark);padding-top:22px;display:flex;justify-content:space-between;font-size:.82rem;color:#767c8a;">
+      <span>&copy; 2026 Ciranta Academy</span>
+      <span>Terms &middot; Privacy</span>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

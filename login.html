@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Ciranta</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .auth{display:flex;min-height:calc(100vh - 73px);}
+  .auth-panel{flex:1;background:var(--ink);color:#fff;padding:70px 60px;display:flex;flex-direction:column;justify-content:space-between;}
+  .auth-panel h2{font-size:1.9rem;max-width:14ch;color:#fff;}
+  .auth-panel .quote{border-left:2px solid var(--coral);padding-left:18px;}
+  .auth-panel .quote p{font-size:1.05rem;margin-bottom:10px;}
+  .auth-panel .quote span{font-size:.85rem;color:#a7acb8;}
+
+  .auth-form{flex:1;display:flex;align-items:center;justify-content:center;padding:60px;}
+  .form-box{width:100%;max-width:380px;}
+  .form-box h1{font-size:1.8rem;margin-bottom:8px;}
+  .form-box .sub{color:var(--muted);font-size:.92rem;margin-bottom:36px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:.85rem;font-weight:500;margin-bottom:8px;}
+  .field input{width:100%;border:1px solid var(--line);border-radius:2px;padding:12px 14px;font-family:'Inter',sans-serif;font-size:.95rem;background:#fff;}
+  .field input:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue);}
+  .form-foot{display:flex;justify-content:space-between;align-items:center;margin:20px 0 28px;font-size:.85rem;}
+  .form-foot a{color:var(--blue);font-weight:500;}
+  .switch{margin-top:24px;font-size:.9rem;color:var(--muted);text-align:center;}
+  .switch a{color:var(--blue);font-weight:600;}
+
+  @media(max-width:900px){.auth-panel{display:none;} .auth-form{padding:40px 24px;}}
+</style>
+</head>
+<body data-page="login">
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">Ciran<i>ta</i></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="courses.html" data-nav="courses">Courses</a>
+      <a href="team.html" data-nav="team">Team</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="login">Log in</a>
+      <a href="register.html" class="btn ghost">Register</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu">&#9776;</button>
+  </nav>
+</header>
+
+<div class="auth">
+  <div class="auth-panel">
+    <h2>Pick up right where your cohort is.</h2>
+    <div class="quote">
+      <p>"Small cohort meant my mentor actually reviewed my work every week."</p>
+      <span>Aditya Kumar — ML Engineer</span>
+    </div>
+  </div>
+  <div class="auth-form">
+    <div class="form-box">
+      <h1>Welcome back</h1>
+      <p class="sub">Log in to continue your courses.</p>
+      <form action="login-process.php" method="POST" id="loginForm">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+        <div class="form-foot">
+          <label style="display:flex;align-items:center;gap:8px;font-weight:400;"><input type="checkbox" name="remember" style="width:auto;"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn block">Log in</button>
+      </form>
+      <p class="switch">New to Ciranta? <a href="register.html">Create an account</a></p>
+    </div>
+  </div>
+</div>
+
+<footer class="dark" style="padding:60px 0 26px;">
+  <div class="wrap">
+    <div class="grid-4" style="border:none;margin-bottom:44px;">
+      <div class="cell" style="border:none;padding:0 28px 0 0;">
+        <a href="index.html" class="brand" style="color:#fff;">Ciran<i>ta</i></a>
+        <p style="font-size:.88rem;color:#a7acb8;margin-top:14px;max-width:30ch;">A learning platform built around mentors, small cohorts, and work you can actually show.</p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Explore</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="courses.html">Courses</a></p>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="about.html">About</a></p>
+        <p style="font-size:.88rem;"><a href="team.html">Team</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Account</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="login.html">Log in</a></p>
+        <p style="font-size:.88rem;"><a href="register.html">Register</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Contact</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;">info@ciranta.academy</p>
+        <p style="font-size:.88rem;">+91 99999 99999</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line-dark);padding-top:22px;display:flex;justify-content:space-between;font-size:.82rem;color:#767c8a;">
+      <span>&copy; 2026 Ciranta Academy</span>
+      <span>Terms &middot; Privacy</span>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

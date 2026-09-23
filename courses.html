@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — Ciranta</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-head{padding:70px 0 40px;border-bottom:1px solid var(--line);}
+  .page-head h1{font-size:2.4rem;margin-bottom:14px;}
+  .page-head p{color:var(--muted);max-width:50ch;}
+
+  .filters{display:flex;gap:10px;padding:26px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  .filter-btn{border:1px solid var(--line);background:transparent;padding:8px 16px;border-radius:2px;font-size:.85rem;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;}
+  .filter-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  .course-cat{font-size:.78rem;color:var(--blue);font-weight:600;margin-bottom:10px;}
+</style>
+</head>
+<body data-page="courses">
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">Ciran<i>ta</i></a>
+    <div class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="courses.html" data-nav="courses">Courses</a>
+      <a href="team.html" data-nav="team">Team</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="login">Log in</a>
+      <a href="register.html" class="btn ghost">Register</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>All courses</h1>
+    <p>Every track runs as a small, cohort-based group with a fixed start date and a mentor working the job right now.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="career">Career Advancement</button>
+    <button class="filter-btn" data-filter="hr">Strategic HR</button>
+    <button class="filter-btn" data-filter="mgmt">Business Management</button>
+    <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="grid-3" id="course-grid">
+      <div class="cell" data-cat="career"><div class="course-cat">Career Advancement</div><h3>Resume & LinkedIn Essentials</h3><p>Turn your work history into a story recruiters actually read.</p><div class="meta"><span>3 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="career"><div class="course-cat">Career Advancement</div><h3>Mastering Interviews</h3><p>Practice with mock interviews and get feedback that sticks.</p><div class="meta"><span>2 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="career"><div class="course-cat">Career Advancement</div><h3>Negotiation & Offers</h3><p>Know what to ask for and how to ask for it.</p><div class="meta"><span>2 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="hr"><div class="course-cat">Strategic HR</div><h3>Data-Driven HR</h3><p>Use people-analytics to back up decisions that used to run on instinct.</p><div class="meta"><span>5 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="hr"><div class="course-cat">Strategic HR</div><h3>Modern Talent Acquisition</h3><p>Source and screen for a market that no longer waits for job boards.</p><div class="meta"><span>4 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="mgmt"><div class="course-cat">Business Management</div><h3>Managing People Well</h3><p>First-time manager skills for hard conversations and real growth.</p><div class="meta"><span>4 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="mgmt"><div class="course-cat">Business Management</div><h3>Agile Project Leadership</h3><p>Run projects that ship, with a team that stays sane.</p><div class="meta"><span>6 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="marketing"><div class="course-cat">Digital Marketing</div><h3>Content Strategy That Converts</h3><p>Plan, write, and measure content across every channel.</p><div class="meta"><span>6 weeks</span><a href="course-details.html">View course</a></div></div>
+      <div class="cell" data-cat="marketing"><div class="course-cat">Digital Marketing</div><h3>Performance Analytics</h3><p>Read the numbers that actually predict what's working.</p><div class="meta"><span>4 weeks</span><a href="course-details.html">View course</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="dark" style="padding:60px 0 26px;">
+  <div class="wrap">
+    <div class="grid-4" style="border:none;margin-bottom:44px;">
+      <div class="cell" style="border:none;padding:0 28px 0 0;">
+        <a href="index.html" class="brand" style="color:#fff;">Ciran<i>ta</i></a>
+        <p style="font-size:.88rem;color:#a7acb8;margin-top:14px;max-width:30ch;">A learning platform built around mentors, small cohorts, and work you can actually show.</p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Explore</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="courses.html">Courses</a></p>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="about.html">About</a></p>
+        <p style="font-size:.88rem;"><a href="team.html">Team</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Account</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;"><a href="login.html">Log in</a></p>
+        <p style="font-size:.88rem;"><a href="register.html">Register</a></p>
+      </div>
+      <div class="cell" style="border:none;padding:0;">
+        <h4 style="font-size:.92rem;margin-bottom:14px;">Contact</h4>
+        <p style="font-size:.88rem;margin-bottom:8px;">info@ciranta.academy</p>
+        <p style="font-size:.88rem;">+91 99999 99999</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line-dark);padding-top:22px;display:flex;justify-content:space-between;font-size:.82rem;color:#767c8a;">
+      <span>&copy; 2026 Ciranta Academy</span>
+      <span>Terms &middot; Privacy</span>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('#course-grid .cell').forEach(cell => {
+        cell.style.display = (filter === 'all' || cell.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
